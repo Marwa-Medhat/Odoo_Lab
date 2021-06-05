@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="orderlines">
+      <field name="name">orderlines</field>
+      <field name="model">orderlines</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="price"/>
+          <field name="description"/>
+          <field name="manufacturer"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="iti_os41.action_window_medicine">
+      <field name="name">orderlines</field>
+      <field name="res_model">orderlines</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+   
+
+<menuitem name="iti_os41" id="iti_os41.menu_medicine_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Menu_medicine" id="iti_os41.menu_2" parent="iti_os41.menu_medicine_root"/>
+    <!-- <menuitem name="Menu 2" id="iti_os41.menu_2" parent="iti_os41.menu_root"/> -->
+
+    <!-- actions -->
+
+    <menuitem name="Medicine" id="iti_os41.menu_2_list" parent="iti_os41.menu_2"
+              action="iti_os41.action_window_medicine"/>
+    
+  
+
+  </data>
+</odoo>

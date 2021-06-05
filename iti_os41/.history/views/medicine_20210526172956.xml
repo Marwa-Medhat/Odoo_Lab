@@ -1,0 +1,63 @@
+<odoo>
+  <data>
+
+    
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="medicine4.list">
+     <field name="name">medicine</field>
+     <field name="model">medicine</field>
+     <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="price"/>
+          <field name="description"/>
+          <field name="manufacturer"/>
+          
+        </tree>
+     </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="iti_os41.action_window2">
+      <field name="name">Medicine</field>
+      <field name="res_model">medicine</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+    <!-- <record model="ir.actions.server" id="iti_os41.action_server2">
+    field name="name">iti_os41 server</field>
+      <field name="model_id" ref="model_iti_os41_iti_os41"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record> -->
+
+
+    <!-- Top menu item -->
+
+    <!-- <menuitem name="iti_os41" id="iti_os41.menu_root"/> -->
+
+    <!-- menu categories -->
+
+    <!-- <menuitem name="Menu 1" id="iti_os41.menu_12" parent="iti_os41.menu_root"/>
+    <menuitem name="Menu 2" id="iti_os41.menu_22" parent="iti_os41.menu_root"/> -->
+
+    <!-- actions -->
+
+    <menuitem name="medicine_list" id="iti_os41.menu_1_list2" parent="iti_os41.menu_1"
+              action="iti_os41.action_window2"/>
+    <!-- <menuitem name="Server to list2" id="iti_os412" parent="iti_os41.menu_22"
+              action="iti_os41.action_server2"/> -->
+
+  </data>
+</odoo>

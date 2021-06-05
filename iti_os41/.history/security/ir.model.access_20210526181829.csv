@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_iti_os41_iti_os41,iti_os41.iti_os41,model_iti_os41_iti_os41,base.group_user,1,1,1,1
+access_iti_os41_iti_os412,iti_os41.iti_os412,model_medicine,base.group_user,1,1,1,1
+access_iti_os41_iti_os413,iti_os41.iti_os412,model_orderlines,base.group_user,1,1,1,1
+

@@ -1,0 +1,9 @@
+{% for book in posts%}
+<h4 style="display:inline">medicine name : </h4>{{book.name}}
+<br>
+<h4 style="display:inline">medicine description : </h4>{{book.description}}
+{% comment %} <br>
+<a href="{% url "edit" book.id %}"><button type="button" class="btn btn-success">Edit</button></a>
+<a href="{% url "delete" book.id %}"><button type="button" class="btn btn-danger">Delete</button></a> {% endcomment %}
+<hr />
+{% endfor %}
